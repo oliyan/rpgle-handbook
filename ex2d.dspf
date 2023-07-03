@@ -1,0 +1,11 @@
+      A                                      DSPSIZ(24 80 *DS3)          
+      A          R DATETEST                                              
+      A                                      CF12(12 'cancel')           
+      A                                  2 33'DATE VALIDATION'           
+      A                                      COLOR(WHT)                  
+      A                                  6  3'Enter Date to Validate: '  
+      A            DATED          6Y 0B  6 29EDTCDE(Y)                   
+      A                                      EDTMSK('  &  &  ')          
+      A  69                                  ERRMSG('Date Not Valid')    
+      A                                 21  5'F12 = Cancel'              
+      A                                      COLOR(BLU)                  
