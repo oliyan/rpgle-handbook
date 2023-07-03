@@ -1,9 +1,8 @@
 // --------------------------------------------------------------
-//                        EX5
+//                        EX6
 // --------------------------------------------------------------
 **free
   ctl-opt dftactgrp(*no) ;
-  exec sql SET OPTION COMPILEOPT = 'DBGVIEW(*SOURCE)';
 
   dcl-pr IsPrimeNumber char(1);
     thisNumber packed(2);

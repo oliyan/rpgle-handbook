@@ -1,9 +1,12 @@
-     A*%%TS  SD  20230703  093602  RAVISHANKR  REL-V7R4M0  5770-WDS
+      *----------------------------------------------------------
+      *                   RVRD
+      *----------------------------------------------------------
+     A*%%TS  SD  20230703  113256  RAVISHANKR  REL-V7R4M0  5770-WDS
      A*%%EC
      A                                      DSPSIZ(24 80 *DS3)
      A                                      INDARA
      A          R RVRR
-     A*%%TS  SD  20230703  093602  RAVISHANKR  REL-V7R4M0  5770-WDS
+     A*%%TS  SD  20230703  113256  RAVISHANKR  REL-V7R4M0  5770-WDS
      A                                      CF05(05 'Refresh')
      A                                      CF03(03 'Exit')
      A                                  1  2USER
@@ -27,6 +30,6 @@
      A  31                                  DSPATR(PC)
      A                                  7 25'(L = Left, R = Right, C = Center)'
      A                                      COLOR(BLU)
-     A            OUTPUTD       60A  O 12 11
+     A            OUTPUTD       60   O 12 11DSPATR(UL)
      A                                 11 34'Output String:'
      A                                      COLOR(WHT)

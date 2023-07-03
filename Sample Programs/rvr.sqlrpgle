@@ -3,7 +3,7 @@
 // PROGRAM NAME: RVR
 // DESCRIPTION : To Reverse the String and align it as per user's choice. (Right. Left or Centered)
 //
-// 
+//
 // -------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------
@@ -103,9 +103,10 @@ Dou  exit = TRUE;
     outputd = %replace(reversedString: outputd: StartPos);
 
   when alignd = 'L';
+    outputd = %trim(reversedString);
 
-  when alignd = 'R' or
-       alignd = *blanks;
+  when alignd = 'R' or alignd = *blanks;
+    evalR outputd = %trim(reversedString);
   endsl;
 
 EndDo;
@@ -126,6 +127,7 @@ dcl-proc ReverseIt export;
 
   dcl-c ONE const(1);
 
+  thisString = %trim(thisString);
   totalLength = %len(%trim(thisString));
   endPos = TotalLength;
   for count = ONE to TotalLength;
