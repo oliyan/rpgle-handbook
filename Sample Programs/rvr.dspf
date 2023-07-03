@@ -1,0 +1,32 @@
+     A*%%TS  SD  20230703  093602  RAVISHANKR  REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A          R RVRR
+     A*%%TS  SD  20230703  093602  RAVISHANKR  REL-V7R4M0  5770-WDS
+     A                                      CF05(05 'Refresh')
+     A                                      CF03(03 'Exit')
+     A                                  1  2USER
+     A            PGMNAMED      10A  O  2  2
+     A                                  1 20'Utility to Reverse and Justify the-
+     A                                       String'
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                  2 72TIME
+     A                                 24  2'F3=Exit, F5=Refresh'
+     A                                      COLOR(BLU)
+     A            ERRMSGD       70A  O 23  6COLOR(WHT)
+     A                                  5  3'Input String.....:'
+     A            INPUTD        30A  B  5 22
+     A  30                                  DSPATR(RI)
+     A  30                                  DSPATR(PC)
+     A                                  7  3'Alignment........:'
+     A            ALIGND         1A  B  7 22
+     A  31                                  DSPATR(RI)
+     A  31                                  DSPATR(PC)
+     A                                  7 25'(L = Left, R = Right, C = Center)'
+     A                                      COLOR(BLU)
+     A            OUTPUTD       60A  O 12 11
+     A                                 11 34'Output String:'
+     A                                      COLOR(WHT)
