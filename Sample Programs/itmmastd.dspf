@@ -1,0 +1,68 @@
+     A*----------------------------------------------------------
+     A*               ITEM MASTER FILE SCREEN DESIGN
+     A*----------------------------------------------------------
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A                                      CF05(05 'Refresh')
+     A                                      CF03(03 'Exit')
+     A                                      CF12(12 'Cancel')
+     A                                      PAGEUP(25)
+     A                                      PAGEDOWN(26)
+     A
+     A          R ITHEADER
+     A                                  1  2USER
+     A            PGMNAMED      10A  O  2  2
+     A                                  1 34'Programmers.io'
+     A                                      COLOR(WHT)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                  2 72TIME
+     A                                 24  2'F3=Exit, F5=Refresh'
+     A                                      COLOR(BLU)
+     A                                  2 29'Item Master Maintenance'
+     A          R ITSFL                     SFL
+     A                                      TEXT('Item Master Subfile')
+     A  67                                  SFLNXTCHG
+     A            D_RRN          4S 0H
+     A            D_OPT          1  0B 10  2
+     A            D_ITNUM        5  0O 10  7
+     A            D_ITDESC      30   O 10 20
+     A            D_ITQTY        5  0O 10 53
+     A            D_ITPRICE      5  0O 10 69
+     A          R ITCTL                     SFLCTL(ITSFL)
+     A                                      CF03(03 'Exit')
+     A                                      CF05(04 'Refresh')
+     A                                      CF06(06 'Add record')
+     A                                      CF12(12 'Cancel')
+     A  31                                  SFLDSP
+     A  32                                  SFLDSPCTL
+     A  33                                  SFLCLR
+     A  34                                  SFLEND(*MORE)
+     A                                      SFLSIZ(0009)
+     A                                      SFLPAG(0009)
+     A                                  9 20'Item Description'
+     A                                      COLOR(WHT)
+     A                                  9 53'Item Quantity'
+     A                                      COLOR(WHT)
+     A                                  9 69'Item Price'
+     A                                      COLOR(WHT)
+     A                                  9  2'Opt'
+     A                                      COLOR(WHT)
+     A                                  9  7'Item Number'
+     A                                      COLOR(WHT)
+     A                                  6  2'Type options, press Enter.'
+     A                                      COLOR(BLU)
+     A                                  7  5'2=Edit      3=Copy      4=Delete  -
+     A                                          5=Display'
+     A                                      COLOR(BLU)
+     A            D_POSTO        5S 0B  4 75
+     A                                  4 52'Position to  . . . . .'
+     A                                  5 52'Search for   . . .'
+     A            D_SEARCH      10A  B  5 71
+     A          R ITEMPTY
+     A                                  9 28'---- No Records Found ----'
+     A                                      DSPATR(BL)
+     A          R ITFOOTER
+     A                                 23  3'F3=Exit F6=Add F12=Cancel'
+     A                                      COLOR(BLU)
+
