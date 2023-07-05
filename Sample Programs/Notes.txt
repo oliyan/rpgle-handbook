@@ -1,1 +1,29 @@
 Header and Footer are not displaying.
+
+SQL Query for adding records
+INSERT INTO ITMMASTF (ITNUM, ITDESC, ITPRICE, ITQTY)
+VALUES
+(1, 'Sensitive Teeth Toothpaste', 5, 10),
+(2, 'Long Grain Basmati Rice', 20, 5),
+(3, 'AA Alkaline Batteries Pack', 8, 15),
+(4, 'Moisturizing Shampoo', 12, 8),
+(5, 'Gentle Bar Soap', 3, 20),
+(6, 'Crunchy Oat Cereal', 6, 12),
+(7, 'Fresh Whole Milk', 4, 18),
+(8, 'Freshly Baked Bread', 2, 25),
+(9, 'Cheddar Cheese Block', 7, 10),
+(10, '100% Pure Orange Juice', 6, 15),
+(11, 'Creamy Greek Yogurt', 3, 20),
+(12, 'Farm Fresh Eggs', 5, 10),
+(13, 'Boneless Chicken ', 15, 5),
+(14, 'Wild Salmon Fillet', 10, 8),
+(15, 'Organic Russet Potatoes', 4, 20),
+(16, 'Vine-Ripened Tomatoes', 3, 25),
+(17, 'Sweet Vidalia Onions', 2, 30),
+(18, 'Fine Sea Salt', 1, 50),
+(19, 'Cracked Black Pepper', 2, 40),
+(20, 'Granulated Cane Sugar', 3, 35),
+(21, 'All-Purpose Flour', 4, 25),
+(22, 'Arabica Coffee Beans', 8, 15),
+(23, 'Classic Earl Tea Bags', 5, 20),
+(24, 'Bottled Water', 1, 100)

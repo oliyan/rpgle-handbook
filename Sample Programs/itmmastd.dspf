@@ -10,6 +10,7 @@
      A                                      PAGEDOWN(26)
      A
      A          R ITHEADER
+     A                                      OVERLAY
      A                                  1  2USER
      A            PGMNAMED      10A  O  2  2
      A                                  1 34'Programmers.io'
@@ -30,16 +31,13 @@
      A            D_ITQTY        5  0O 10 53
      A            D_ITPRICE      5  0O 10 69
      A          R ITCTL                     SFLCTL(ITSFL)
-     A                                      CF03(03 'Exit')
-     A                                      CF05(04 'Refresh')
      A                                      CF06(06 'Add record')
-     A                                      CF12(12 'Cancel')
      A  31                                  SFLDSP
      A  32                                  SFLDSPCTL
      A  33                                  SFLCLR
      A  34                                  SFLEND(*MORE)
-     A                                      SFLSIZ(0009)
-     A                                      SFLPAG(0009)
+     A                                      SFLSIZ(005)
+     A                                      SFLPAG(005)
      A                                  9 20'Item Description'
      A                                      COLOR(WHT)
      A                                  9 53'Item Quantity'
@@ -60,9 +58,13 @@
      A                                  5 52'Search for   . . .'
      A            D_SEARCH      10A  B  5 71
      A          R ITEMPTY
+     A                                      OVERLAY
      A                                  9 28'---- No Records Found ----'
      A                                      DSPATR(BL)
      A          R ITFOOTER
+     A                                      OVERLAY
+     A            D_ERROR       30A  O 22  5
+     A                                      COLOR(WHT)
      A                                 23  3'F3=Exit F6=Add F12=Cancel'
      A                                      COLOR(BLU)
 
