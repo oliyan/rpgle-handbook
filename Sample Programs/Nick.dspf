@@ -1,0 +1,83 @@
+ A                                      DSPSIZ(27 132 *DS4)
+ A                                      REF(nickf)
+ A                                      PRINT
+ A                                      INDARA
+ A                                      ERRSFL
+ A                                      HELP(01)
+ A                                      CA03(03)
+ A                                      CA05(05)
+ A                                      CA12(12)
+ A                                      PAGEUP(25)
+ A                                      PAGEDOWN(26)
+ A          R SFL01                     SFL
+ A            SFLRRN         5S 0H
+ A            EMAIL     R        H
+ A            STREET1   R        H
+ A            STREET2   R        H
+ A            CITY      R        H
+ A            STATECODE R        H
+ A            ZIP       R        H
+ A            COUNTRY   R        H
+ A            CODE      R        O  5  5
+ A            FORENAME  R        O  5 17
+ A            SURNAME   R        O  5 39
+ A            BIRTHDAY  R        O  5 60
+ A                                      EDTWRD('  /  /    ')
+ A            PHONE     R        O  5 71
+ A            CALCADD       40A  O  5 87TEXT('Combined Address')
+ A          R CTL01                     SFLCTL(SFL01)
+ A                                      SFLSIZ(0020)
+ A                                      SFLPAG(0020)
+ A                                      OVERLAY
+ A  30                                  SFLDSP
+ A  31                                  SFLDSPCTL
+ A  32                                  SFLCLR
+ A  35                                  SFLEND(*SCRBAR *MORE)
+ A                                  1  3'Sample Subfile Program in IBM i RP-
+ A                                      GLE'
+ A                                      COLOR(WHT)
+ A                                  1 98'System'
+ A                                      COLOR(BLU)
+ A                                  1105SYSNAME
+ A                                  1118'Date'
+ A                                      COLOR(BLU)
+ A                                  1123DATE
+ A                                      EDTCDE(Y)
+ A                                  2100'User'
+ A                                      COLOR(BLU)
+ A                                  2105USER
+ A                                  2118'Time'
+ A                                      COLOR(BLU)
+ A                                  2123TIME
+ A                                  3  5'Customer ID'
+ A                                      COLOR(BLU)
+ A                                  3 17'Customer'
+ A                                      COLOR(BLU)
+ A                                  3 39'Customer'
+ A                                      COLOR(BLU)
+ A                                  3 61'Customer'
+ A                                      COLOR(BLU)
+ A                                  3 71'Customer'
+ A                                      COLOR(BLU)
+ A            POSITION  R        O  4  5REFFLD(CODE SAMPLETBL)
+ A                                      COLOR(BLU)
+ A  31                                  DSPATR(UL)
+ A  31                                  DSPATR(PC)
+ A N30                                  DSPATR(ND)
+ A                                  4 17'Forename'
+ A                                      COLOR(BLU)
+ A                                  4 39'Surname'
+ A                                      COLOR(BLU)
+ A                                  4 61'Birthday'
+ A                                      COLOR(BLU)
+ A                                  4 71'Contact Num'
+ A                                      COLOR(BLU)
+ A                                  4 87'Address'
+ A                                      COLOR(BLU)
+ A          R CMD01
+ A                                      OVERLAY
+ A            MOUSECLICK     2Y 0B 25  3PSHBTNFLD((*NUMROW 1) (*GUTTER 1))
+ A                                      PSHBTNCHC(1 '>Enter')
+ A                                      PSHBTNCHC(3 'e>Xit')
+ A                                      PSHBTNCHC(5 '>Refresh')
+ A            ERRORMSG     120A  O 26  2COLOR(RED)

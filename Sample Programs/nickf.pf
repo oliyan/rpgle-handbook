@@ -1,0 +1,15 @@
+ A                                      UNIQUE
+ A          R CUSRCDFMT
+ A            CODE          10          COLHDG('Customer' 'Code')
+ A            FORENAME      20          COLHDG('Customer' 'First Name')
+ A            SURNAME       20          COLHDG('Customer' 'SurName')
+ A            BIRTHDAY       8  0       COLHDG('Customer' 'Birthday')
+ A            PHONE         15  0       COLHDG('Customer' 'Phone')
+ A            EMAIL        100          COLHDG('Customer' 'Email')
+ A            STREET1       50          COLHDG('Customer' 'Address 1')
+ A            STREET2       50          COLHDG('Customer' 'Address 2')
+ A            CITY          50          COLHDG('Customer' 'City')
+ A            STATECODE     50          COLHDG('Customer' 'State')
+ A            ZIP           20          COLHDG('Customer' 'Zip')
+ A            COUNTRY       50          COLHDG('Customer' 'Country')
+ A          K CODE 
