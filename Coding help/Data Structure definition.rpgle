@@ -1,3 +1,4 @@
+**free
 // Declaring as a template
 dcl-ds personal_info_T qualified template;
     first_name varchar(25);
@@ -12,3 +13,5 @@ personal_info.first_name = 'Ravi';
 personal_info.date_of_birth = %date('1991-10-11': *iso);
 
 personal_info_array(1) = personal_info;
+
+
