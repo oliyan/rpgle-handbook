@@ -10,7 +10,7 @@ dcl-ds personal_info likeds(personal_info_T) inz;
 dcl-ds personal_info_array likeds(personal_info_T) dim(20) inz;
 
 personal_info.first_name = 'Ravi';
-personal_info.date_of_birth = %date('1991-10-11': *iso);
+personal_info.date_of_birth = %date('1991-01-01': *iso);
 
 personal_info_array(1) = personal_info;
 
